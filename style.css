@@ -1550,10 +1550,7 @@ align-items: center;  }
         padding: 1rem 1rem;
     }
 
-    @keyframes test {
-        from     { bottom:1rem;}
-        to {bottom:-1rem }
-      }
+ 
 }
 
 @media (max-width:390px) {
