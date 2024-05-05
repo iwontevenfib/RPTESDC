@@ -108,7 +108,7 @@ nav {
     z-index: -99;
     object-fit: cover;
   object-position: bottom;
-    height: 60%;
+    height:65%;
     width: 100%;
     filter: brightness(50%);
 }
@@ -183,19 +183,78 @@ font-weight: 700;
 
 .arrow-bounce {
     width: 75px;
-    position: relative;
-    animation: test ease .5s infinite;
+    position: relative; 
+    animation: test 1s infinite ease-in-out;
 }
 
 
   
   @keyframes test {
-    from     { bottom:0rem;}
-    to {bottom:-2rem }
+    0%{ bottom:0rem;}
+    50%{bottom:-2rem }
+    100% {bottom:0rem;}
   }
 
 
-/* SECONDS SEction */
+  
+/* Mission Vision */
+
+.h-container {
+    display: flex;
+    justify-items: center;
+    justify-content:center;
+    gap: 10rem;
+}
+
+
+.cf-descriptions {
+    width: 30vw;
+    font-family: var(--secondaryfont);
+    gap:1rem;
+   font-size: 20px;
+}
+.cf-descriptions h4{
+    margin-bottom: .8rem;
+}
+.cf-descriptions h1{
+    margin-bottom: .8rem;
+}
+.cf-descriptions p{
+    margin-bottom: 2.5rem;
+}
+
+
+.test-cf {
+   
+    padding: 7rem 0;
+}
+
+
+.cf-img-container {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.img-hl {
+    width: auto;
+    height: 350px;
+}
+
+
+.flex-img {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.flex-img img {
+    width: 150px;
+}
+
+
+
+
 
 /* EVENTS */
 
@@ -398,7 +457,7 @@ width: 100%;
     left: -15px;
 }
 
-/* NEXT SECTIOn */
+/* Course Section */
 
 
 .course-sec {
@@ -452,8 +511,7 @@ width: 100%;
 
 
 
-
-
+/* Courses Box */
 
 .course-card {
     list-style: none;
@@ -566,69 +624,10 @@ width: 100%;
 
 
 
-/* THIRD SECTION */
-
-.h-container {
-    display: flex;
-    justify-items: center;
-    justify-content:center;
-    gap: 10rem;
-}
-
-
-.cf-descriptions {
-    width: 30vw;
-    font-family: var(--secondaryfont);
-    gap:1rem;
-   font-size: 20px;
-}
-.cf-descriptions h4{
-    margin-bottom: .8rem;
-}
-.cf-descriptions h1{
-    margin-bottom: .8rem;
-}
-.cf-descriptions p{
-    margin-bottom: 2.5rem;
-}
-
-
-.test-cf {
-   
-    padding: 7rem 0;
-}
-
-
-.cf-img-container {
-    display: flex;
-    gap: 8px;
-    align-items: center;
-}
-
-.img-hl {
-    width: auto;
-    height: 350px;
-}
-
-
-.flex-img {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.flex-img img {
-    width: 150px;
-}
 
 
 
-
-
-
-
-
-
+/* Enrollment Section */
 
 
 
@@ -998,7 +997,7 @@ footer {
 
 
 
-
+/* Footer 2 */
 
 
 .second-footer-sec {
@@ -1044,9 +1043,7 @@ footer {
 
 
 /* Links STyle */
-
-
-/* Bread & Pastry */
+/*  Courses Link PAGEs */
 
 .links-container-b {
     display: flex;
@@ -1074,9 +1071,6 @@ footer {
 
 
 
-
-
-/* BREAD AND PASTRY PAGE */
 
 .bp-sec {
     background: #f5f5f5;
@@ -1165,9 +1159,10 @@ footer {
 
     .bottom-slice {
         height: 50vh;
+        background: #f5f5f5;
     }
     .top-slice {
-        height: 50vh;
+        height:50vh;
     }
     .event-box {
         width: 300px;
@@ -1179,8 +1174,9 @@ footer {
     }
       
   @keyframes test {
-    from     { bottom:-2rem;}
-    to {bottom:-4rem }
+    0%{ bottom:-2rem;}
+    50%{bottom:-4rem }
+    100% {bottom:-2rem;}
   }
     
 }
@@ -1226,10 +1222,12 @@ footer {
     }
     
       
-    @keyframes test {
-        from     { bottom:0rem;}
-        to {bottom:-2rem }
-      }
+    
+  @keyframes test {
+    0%{ bottom:0rem;}
+    50%{bottom:-2rem }
+    100% {bottom:0rem;}
+  }
 }
 
 @media (max-width:1360px){
