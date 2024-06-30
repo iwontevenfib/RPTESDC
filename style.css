@@ -39,8 +39,10 @@ nav {
     background: #10110eb2;
   display: flex;
   justify-content: space-between;
+  
 
 }
+
 
 .navmenu {
     position: absolute;
@@ -49,6 +51,9 @@ nav {
     top: .5rem;
   display: none;
 }
+
+
+
 
 .llogo {
     margin: 0 0 0 25px;
@@ -112,6 +117,54 @@ nav {
     width: 100%;
     filter: brightness(50%);
 }
+
+.main-sec-bg-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+  }
+  
+  .main-sec-bg-slider img {
+    position: absolute;
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    filter: brightness(50%);
+    
+  }
+  
+  .main-sec-bg-slider img.active {
+    opacity: 1;
+  }
+
+  .slider {
+    position: relative;
+    width: 100%;
+    max-width: 100vw;
+    overflow: hidden;
+  }
+  
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slide {
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .slide img {
+    width: 100%;
+    display: block;
+  }
+  
 
 
 .top-slice h2 {
@@ -252,8 +305,20 @@ font-weight: 700;
     width: 150px;
 }
 
+/* video sec */
+.yt-video-container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 100px;
 
+}
 
+.yt-video {
+    width: 100%;
+    height: 600px;
+}
 
 
 /* EVENTS */
@@ -275,7 +340,10 @@ font-weight: 700;
 .events-header {
     margin-bottom: 20px;
     font-size: 35px;
+    text-align: center;
+    
 }
+
 
 
 
@@ -298,6 +366,7 @@ font-weight: 700;
     gap: 20px;
     border-radius: 15px;
     margin-bottom: 20px;
+    
     
 }
 
@@ -362,12 +431,15 @@ div.event-box:nth-child(4){
     border: #001b55 solid 3px;
     font-weight: 800;
     color: #001b55;
+    text-decoration: none;
    
 }
 .events-view-all:hover {
     color: #fff;
     background-color: #001b55;
 }
+
+
 
 .event-btn {
     display: flex;
@@ -395,6 +467,7 @@ hr {
     margin-bottom: 5px;
     font-family: var(--secondaryfont);
     width: auto;
+    cursor: pointer;
 }
 
 .announcement-box:hover {
@@ -709,6 +782,7 @@ width: 100%;
     font-size: 30px;
     position: relative;
     display: inline-block;
+    text-align: center;
     
 }
 
@@ -786,6 +860,69 @@ border-radius: 5px;
 }
 .faq.active {
     border: none;
+}
+
+/* ABOUT TESDA */
+
+.aboutesda-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem;
+    margin-top: 4rem;
+    gap: 25px;
+    /* background-color: #561C24 ; */
+    background-color: white;
+    height: 50%;
+    position: relative;
+    font-family: var(--secondaryfont);
+}
+
+.logotesda {
+    width: 700px;
+}
+
+.tesda-details {
+   
+    width: 600px;
+    cursor: default;
+}
+
+
+.aboutesda {
+    color: var(--mcolor3);
+    font-family: var(--secondaryfont);
+    font-weight: 500;
+    position: relative;
+    display: flex;
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.aboutesda:before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: var(--mcolor1);
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: 300ms ease-in-out;  
+}
+
+.tesda-details:hover .aboutesda:before {
+    transform: scaleX(1);
+}
+
+
+.tesda-details p {
+   
+    font-size: 17px;
+    margin: 0 0 30px 0;
+    line-height: 2;
+    text-align: justify;
+    position: relative;
 }
 
 
@@ -1122,10 +1259,12 @@ footer {
     margin-bottom: 20px;
     opacity: 1;
     transition: 500ms ease;
+    cursor: pointer;
 }
 
 .grid-img:hover {
- filter: brightness(50%);
+    
+ filter: brightness(60%);
 }
 
 .grid-container {
@@ -1134,6 +1273,54 @@ footer {
     row-gap: 20px;
     columns: 3;
     margin-top: 20px;
+}
+
+.bp-grid .grid-container .grid-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: 2s linear;
+
+}
+
+.bp-grid .grid-container .grid-img:hover img {
+    transform: scale(1.1);
+}
+
+/*POP UP IMAGE */
+
+.bp-grid .popup-image {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .9);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.bp-grid .popup-image span {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 60px;
+    font-weight: bolder;
+    color: #fff;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.bp-grid .popup-image img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid #fff;
+    border-radius: 5px;
+    width: 750px;
+    object-fit: cover;
 }
 
 
@@ -1178,6 +1365,11 @@ footer {
     50%{bottom:-4rem }
     100% {bottom:-2rem;}
   }
+
+  .bp-grid .popup-image img {
+    width: 80%;
+    max-height: 80%;
+}
     
 }
 
@@ -1220,6 +1412,11 @@ footer {
     .arrow-bounce {
         width: 68px;
     }
+
+    .bp-grid .popup-image img {
+        width: 80%;
+        height: auto;
+    }
     
       
     
@@ -1247,8 +1444,7 @@ footer {
     }
     
     .h-container {
-        gap: 
-        7rem;
+        gap: 7rem;
     }
     
     .events-sec {
@@ -1268,7 +1464,15 @@ align-items: center;  }
 .main-sec-bg img {
     height: 60%;
 }
+
+.bp-grid .popup-image img {
+    width: 80%;
+    height: auto;
 }
+
+}
+
+
 
 
 
@@ -1295,6 +1499,24 @@ align-items: center;  }
             flex-direction: column;
         }
 
+        .bp-grid .popup-image img {
+            width: 85%;
+            height: auto;
+        }
+
+        .aboutesda-container {
+            flex-direction: column;
+        }
+       
+        .tesda-details h1 {
+            text-align: center;
+        }
+
+        .events-header {
+        text-align: center;
+    }
+
+        
 }
 
 @media(max-width:1024px) {
@@ -1337,6 +1559,8 @@ align-items: center;  }
        
     }
 
+    
+
     .test-cf {
         padding: 4rem 0;
     }
@@ -1351,7 +1575,20 @@ align-items: center;  }
     .logo-text {
         display: none;
     }
+
+    .bp-grid .popup-image img {
+        width: 88%;
+        height: auto;
+    }
+    .events-header {
+        text-align: center;
+    }
+
+    
 }
+
+
+
 
 
 @media (max-width:835px) {
@@ -1388,6 +1625,15 @@ align-items: center;  }
     max-width: 90%;
 }
 
+.bp-grid .popup-image img {
+    width: 80%;
+    height: auto;
+}
+  
+.events-header {
+    text-align: center;
+}
+ 
 }
 
 
@@ -1396,7 +1642,14 @@ align-items: center;  }
 
 @media (max-width:768px) {
 
-  
+    .slide img {
+        height: auto;
+      }
+
+    .bp-grid .popup-image img {
+        width: 90%;
+        height: auto;
+    }
 
     .git {
         font-size: 25px;
@@ -1461,6 +1714,19 @@ align-items: center;  }
     .announcement-box {
         width: auto;
     }
+
+    .logotesda {
+        width: 500px;
+    }
+
+    .tesda-details {
+        width: auto;
+    }
+
+    .events-header {
+        text-align: center;
+    }
+    
 }
 
 @media (max-width:640px) {
@@ -1493,7 +1759,13 @@ align-items: center;  }
         padding: 0 5rem;
     }
 
+    .bp-grid .popup-image img {
+        width: 90%;
+        height: auto;
+    }
    
+    
+
 }
 
 @media (max-width:550px) {
@@ -1528,8 +1800,29 @@ align-items: center;  }
     .events-header {
         text-align: center;
     }
- 
+
+    .bp-grid .popup-image img {
+        width: 80%;
+        height: auto;
+    }
+
+    .aboutesda-container {
+        padding: 6rem 1rem;
+    }
+
+    .tesda-details {
+        font-size: 30px;
+    }
+    
+    .logotesda {
+        width: 100%;
+      }
+    
+    
+      
 }
+
+
 
 @media (max-width:475px) {
 
@@ -1555,7 +1848,24 @@ align-items: center;  }
     50%{bottom:-1rem }
     100% {bottom:1rem;}
   }
+  
+  .logotesda {
+    width: 100%;
+  }
 
+  
+
+ 
+  
+
+}
+
+
+
+
+
+@media (max-width:412px) {
+    
 }
 
 @media (max-width:390px) {
@@ -1577,4 +1887,13 @@ align-items: center;  }
         width: auto;
         height: 250px;
     }
+
+    .logotesda {
+        width: 80%;
+      }
+      
+      
+   
+     
 }
+
